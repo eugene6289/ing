@@ -5,7 +5,7 @@
     list-style: none;   
 }
 body{
-    background: linear-gradient(135deg, #000a20 0%,#005b72 100%);
+    background: linear-gradient(135deg, #2e2e2e ,#2d0080);
     background-size: 400% 400%;
     animation: BackgroundGradient 15s ease infinite alternate;
 }
@@ -14,11 +14,42 @@ body{
     50% {background-position: 75% 50%;}
     100% {background-position: 0% 50%;}
   }
-#navigation-bar-mobile{
-    display: none;
-}
+//menu-mobile
 .menu-mobile{
     display: none;
+    position: fixed;
+    top: 0;
+    width: 40%;
+    height: 100vh;
+    display: block;
+    z-index: 1;
+    ul{
+        transition: all 0.3s ease-in;
+        transform: translateX(-100%);
+        width: 100%;
+        height: 100%;
+        background: #1e7277;
+        text-align: center;
+        li{
+            border-top: 1px dotted white;
+            width: 100%;
+            height: 50px;
+            a{
+                line-height: 50px;
+                font-size: 1rem;
+                text-decoration: none;
+                color: #e6e7e8;
+                display: block;
+                opacity: 0;
+            }
+        }
+        .menu-list{
+            background: #e6e7e8;
+            a{
+                color: #1e7277;
+            }
+        }
+    }
 }
 
 //navbar
@@ -45,23 +76,15 @@ body{
     .logo{
         display: flex;
         width: 100%;
-        // height: 100%;
         padding: 0 0 0 3rem;
         align-self: center;
         p{
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 2rem;
-                font-weight: bold;
-                color: #fff;
-                text-shadow: 0.5px 1px 1px #000, 1px 1.5px 1px #fff;
-                cursor: pointer;
-        }
-        &:hover p{
-            // background: -webkit-linear-gradient(rgb(255, 145, 145), #333);
-            // -webkit-background-clip: text;
-            // -webkit-text-fill-color: transparent;
-            color: #ff8686;
-            transition: all 0.3s ease-in; 
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0.5px 1px 1px #000, 1px 1.5px 1px #fff;
+            cursor: pointer;
         }
     }
     ul.menu{
@@ -189,204 +212,66 @@ body{
 
 
 @media all and (max-width:575px){
-    //navbar
     #navigation-bar{
-        display: none;
-    }
-    #navigation-bar-mobile{
         width: 100%;
+        height: 120px;
         display: block;
         position: sticky;
         top: 0;
         transition: all 0.3s ease-in;
         padding: 5px 0;
-        &.navbar-active{
+        &.navbar-active-mobile{
             background: rgba(0, 0, 0, 0.295);
             transition: all 0.3s ease-in;
         }
         .logo{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-self: center;
-            p{
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 2rem;
-                font-weight: bold;
-                color: #ffffff;
-                text-shadow: 0.5px 1px 1px #000, 1px 1.5px 1px #fff,-1.5px -0.5px 2px #fc9595;
-                cursor: pointer;
-                &:hover{
-                        color: #ff8686;
-                        transition: all 0.3s ease-in;
-                        
-                }
-            }
+            width: 200px;
+            margin: auto;
         }
-        
-        //burger
+        ul.menu{
+            display: none;
+        }
         .border-bar{
-            display: flex;
-            width: 150px;
+            width: 200px;
             margin: 15px auto;
             .burger{
-                background: #4ccf00;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                margin: 0 auto;
-                position: relative;
-                cursor: pointer;
-                top: 0;
-                left: 0;
-                &:hover{
-                    background: #4ccf00c0;
-                    -webkit-transition: .3s all ease;
-                    transition: .3s all ease;
-                }
-                div{
-                        width: 22px;
-                        height:4px;
-                        background: #ffffff;
-                        margin: 4px 0;
-                        border-radius: 50px;
-                        position: relative;
-                        top: 15%;
-                        left: 23.5%;
-                        right: 0;
-                        bottom: 0;
-                        -webkit-transition: .3s all ease;
-                        transition: .3s all ease;
-                    }
-            }
-            .game-button{
-                background: #144691;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                margin: 0 auto;
-                position: relative;
-                cursor: pointer;
-                top: 0;
-                left: 0;
-                text-align: center;
-                &:hover{
-                    background: #1955ad;
-                    -webkit-transition: .3s all ease;
-                    transition: .3s all ease;
-                }
-                i{
-                    font-size: 1.6rem;
-                    color: #fff;
-                    position: absolute;
-                    top: 15%;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    -webkit-transition: .3s all ease;
-                    transition: .3s all ease;
-                }
-            }    
-            .home-button{
-                background: #148c91;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                margin: 0 auto;
-                position: relative;
-                cursor: pointer;
-                top: 0;
-                left: 0;
-                text-align: center;
-                &:hover{
-                    background: #1aa7ac;
-                    -webkit-transition: .3s all ease;
-                    transition: .3s all ease;
-                }
-                i{
-                    font-size: 1.6rem;
-                    color: #fff;
-                    position: absolute;
-                    top: 15%;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    -webkit-transition: .3s all ease;
-                    transition: .3s all ease;
-                }
-            }    
-        }
-        
-    }
-}
-//menu-mobile
-.menu-mobile{
-    position: fixed;
-    top: 0;
-    width: 200px;
-    height: 100vh;
-    display: block;
-    transition: all 0.3s ease-in;
-    z-index: 2;
-    transform: translateX(-100%);
-    ul{
-        height: 100%;
-        background: #1e7277;
-        text-align: center;
-        li{
-            border-top: 1px dotted white;
-            width: 100%;
-            height: 50px;
-            a{
-                line-height: 50px;
-                font-size: 1rem;
-                text-decoration: none;
-                color: #e6e7e8;
                 display: block;
-                opacity: 0;
+                order: 3;
             }
-        }
-        .menu-list{
-            background: #e6e7e8;
-            a{
-                color: #1e7277;
-            }
-        }
     }
 }
+}
+
 // active
-    .menuActive{
-        background: #0d3335;
-        z-index: 5;
-    }
-
-    @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(-50px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-6px, 6px);
-    }
-
-    .toggle .line2 {
-        opacity: 0;
-    }
-
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-6px, -6px);
-    }
-    
-    .nav-active {
+.nav-active {
+    ul{
         transform: translateX(0);
     }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
 
 //section1
 .section-1{

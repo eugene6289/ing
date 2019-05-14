@@ -39,26 +39,6 @@
         </div>
     </nav>
 
-    <nav id="navigation-bar-mobile">
-        <div class="logo">
-            <p>Eu</p>
-            <p>GenE</p>
-        </div>
-        <div class="border-bar">
-            <div class="home-button">
-                <a href="https://fontawesome.com/icons/home?style=solid" target="_blank"><i class="fas fa-home"></i></a>
-            </div>
-            <div class="game-button">
-                <a href="https://fontawesome.com/icons/home?style=solid" target="_blank"><i class="fas fa-dice"></i></a>
-            </div>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-    </nav>
-
     <!-- mobile-menu -->
     <div class="menu-mobile">
         <ul class="menu">
@@ -103,32 +83,28 @@
     <script>
         $(document).ready(function () {
             $(window).on("scroll", function () {
-                if ($(window).scrollTop() >= 100) {
+                if ($(window).scrollTop() >= 100 && $(window).width() >= 576) {
                     $('#navigation-bar').addClass('navbar-active');
-                    $('#navigation-bar-mobile').addClass('navbar-active');
                     $('#navigation-bar .res-logo').hide(200);
+                }else {
+                    $('#navigation-bar').removeClass('navbar-active');
+                    $('#navigation-bar .res-logo').show(200);
+                }
+                if ($(window).scrollTop() >= 100 && $(window).width() < 576) {
+                    $('#navigation-bar').addClass('navbar-active-mobile');
                 }
                 else {
-                    $('#navigation-bar').removeClass('navbar-active');
-                    $('#navigation-bar-mobile').removeClass('navbar-active');
-                    $('#navigation-bar .res-logo').show(200);
+                    $('#navigation-bar').removeClass('navbar-active-mobile');
                 }
             });
 
-            $(".burger").on("click", function () {
+            $(".burger").on("click", function (e) {
                 var menu = $(".menu-mobile");
                 var ul = $(".menu-mobile ul");
                 var li = $(".menu-mobile ul li");
                 var a = $(".menu-mobile ul li a");
 
                 $(menu).toggleClass("nav-active");
-
-                if ($(menu).hasClass("nav-active")) {
-                    $("body").addClass("menuActive")
-                } else {
-                    $("body").removeClass("menuActive")
-                }
-
 
                 $(a).each(function (index) {
                     console.log(this.style.animation)

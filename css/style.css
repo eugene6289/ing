@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #000a20 0%, #005b72 100%);
+  background: linear-gradient(135deg, #2e2e2e, #2d0080);
   background-size: 400% 400%;
   -webkit-animation: BackgroundGradient 15s ease infinite alternate;
           animation: BackgroundGradient 15s ease infinite alternate;
@@ -37,12 +37,48 @@ body {
   }
 }
 
-#navigation-bar-mobile {
-  display: none;
-}
-
 .menu-mobile {
   display: none;
+  position: fixed;
+  top: 0;
+  width: 40%;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+}
+
+.menu-mobile ul {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  width: 100%;
+  height: 100%;
+  background: #1e7277;
+  text-align: center;
+}
+
+.menu-mobile ul li {
+  border-top: 1px dotted white;
+  width: 100%;
+  height: 50px;
+}
+
+.menu-mobile ul li a {
+  line-height: 50px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #e6e7e8;
+  display: block;
+  opacity: 0;
+}
+
+.menu-mobile ul .menu-list {
+  background: #e6e7e8;
+}
+
+.menu-mobile ul .menu-list a {
+  color: #1e7277;
 }
 
 #navigation-bar {
@@ -91,15 +127,9 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 2rem;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
   text-shadow: 0.5px 1px 1px #000, 1px 1.5px 1px #fff;
   cursor: pointer;
-}
-
-#navigation-bar .logo:hover p {
-  color: #ff8686;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
 }
 
 #navigation-bar ul.menu {
@@ -239,10 +269,8 @@ body {
 
 @media all and (max-width: 575px) {
   #navigation-bar {
-    display: none;
-  }
-  #navigation-bar-mobile {
     width: 100%;
+    height: 120px;
     display: block;
     position: -webkit-sticky;
     position: sticky;
@@ -251,175 +279,33 @@ body {
     transition: all 0.3s ease-in;
     padding: 5px 0;
   }
-  #navigation-bar-mobile.navbar-active {
+  #navigation-bar.navbar-active-mobile {
     background: rgba(0, 0, 0, 0.295);
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
   }
-  #navigation-bar-mobile .logo {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: center;
-        align-self: center;
+  #navigation-bar .logo {
+    width: 200px;
+    margin: auto;
   }
-  #navigation-bar-mobile .logo p {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0.5px 1px 1px #000, 1px 1.5px 1px #fff,-1.5px -0.5px 2px #fc9595;
-    cursor: pointer;
+  #navigation-bar ul.menu {
+    display: none;
   }
-  #navigation-bar-mobile .logo p:hover {
-    color: #ff8686;
-    -webkit-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in;
-  }
-  #navigation-bar-mobile .border-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 150px;
+  #navigation-bar .border-bar {
+    width: 200px;
     margin: 15px auto;
   }
-  #navigation-bar-mobile .border-bar .burger {
-    background: #4ccf00;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    position: relative;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-  }
-  #navigation-bar-mobile .border-bar .burger:hover {
-    background: #4ccf00c0;
-    -webkit-transition: .3s all ease;
-    transition: .3s all ease;
-  }
-  #navigation-bar-mobile .border-bar .burger div {
-    width: 22px;
-    height: 4px;
-    background: #ffffff;
-    margin: 4px 0;
-    border-radius: 50px;
-    position: relative;
-    top: 15%;
-    left: 23.5%;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: .3s all ease;
-    transition: .3s all ease;
-  }
-  #navigation-bar-mobile .border-bar .game-button {
-    background: #144691;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    position: relative;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    text-align: center;
-  }
-  #navigation-bar-mobile .border-bar .game-button:hover {
-    background: #1955ad;
-    -webkit-transition: .3s all ease;
-    transition: .3s all ease;
-  }
-  #navigation-bar-mobile .border-bar .game-button i {
-    font-size: 1.6rem;
-    color: #fff;
-    position: absolute;
-    top: 15%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: .3s all ease;
-    transition: .3s all ease;
-  }
-  #navigation-bar-mobile .border-bar .home-button {
-    background: #148c91;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    position: relative;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    text-align: center;
-  }
-  #navigation-bar-mobile .border-bar .home-button:hover {
-    background: #1aa7ac;
-    -webkit-transition: .3s all ease;
-    transition: .3s all ease;
-  }
-  #navigation-bar-mobile .border-bar .home-button i {
-    font-size: 1.6rem;
-    color: #fff;
-    position: absolute;
-    top: 15%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: .3s all ease;
-    transition: .3s all ease;
+  #navigation-bar .border-bar .burger {
+    display: block;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 
-.menu-mobile {
-  position: fixed;
-  top: 0;
-  width: 200px;
-  height: 100vh;
-  display: block;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  z-index: 2;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.menu-mobile ul {
-  height: 100%;
-  background: #1e7277;
-  text-align: center;
-}
-
-.menu-mobile ul li {
-  border-top: 1px dotted white;
-  width: 100%;
-  height: 50px;
-}
-
-.menu-mobile ul li a {
-  line-height: 50px;
-  font-size: 1rem;
-  text-decoration: none;
-  color: #e6e7e8;
-  display: block;
-  opacity: 0;
-}
-
-.menu-mobile ul .menu-list {
-  background: #e6e7e8;
-}
-
-.menu-mobile ul .menu-list a {
-  color: #1e7277;
-}
-
-.menuActive {
-  background: #0d3335;
-  z-index: 5;
+.nav-active ul {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @-webkit-keyframes navLinkFade {
@@ -460,11 +346,6 @@ body {
 .toggle .line3 {
   -webkit-transform: rotate(45deg) translate(-6px, -6px);
           transform: rotate(45deg) translate(-6px, -6px);
-}
-
-.nav-active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
 }
 
 .section-1 {
