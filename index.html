@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav id="navigation-bar">
+        <div class="logo">
+            <p class="res-logo">Eu</p>
+            <p>GenE</p>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:;">About</a></li>
+            <li><a href="javascript:;">Product</a></li>
+            <li><a href="javascript:;">Service</a></li>
+            <li><a href="javascript:;">Contact</a></li>
+        </ul>
+        <div class="border-bar">
+            <div class="home-button">
+                <a href="https://fontawesome.com/icons/home?style=solid" target="_blank"><i class="fas fa-home"></i></a>
+            </div>
+            <div class="game-button">
+                <a href="https://fontawesome.com/icons/home?style=solid" target="_blank"><i class="fas fa-dice"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="navigation-bar-mobile">
+        <div class="logo">
+            <p>Eu</p>
+            <p>GenE</p>
+        </div>
+        <div class="border-bar">
+            <div class="home-button">
+                <a href="https://fontawesome.com/icons/home?style=solid" target="_blank"><i class="fas fa-home"></i></a>
+            </div>
+            <div class="game-button">
+                <a href="https://fontawesome.com/icons/home?style=solid" target="_blank"><i class="fas fa-dice"></i></a>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- mobile-menu -->
+    <div class="menu-mobile">
+        <ul class="menu">
+            <li><a href="javascript:;">About</a></li>
+            <li><a href="javascript:;">Product</a></li>
+            <li class="menu-list"><a href="javascript:;">event</a></li>
+            <li class="menu-list"><a href="javascript:;">games</a></li>
+            <li class="menu-list"><a href="javascript:;">webpage</a></li>
+            <li><a href="javascript:;">Service</a></li>
+            <li class="menu-list"><a href="javascript:;">building</a></li>
+            <li><a href="javascript:;">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="section-1">
+        <img src="images/style_title.png" alt="">
+    </section>
+
+    <section class="section-2">
+        <div class="card">
+            <img src="images/style_title.png" alt="">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eaque?</p>
+        </div>
+        <div class="card">
+            <img src="images/style_title.png" alt="">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eaque?</p>
+        </div>
+        <div class="card">
+            <img src="images/style_title.png" alt="">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eaque?</p>
+        </div>
+    </section>
+
+
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).on("scroll", function () {
+                if ($(window).scrollTop() >= 100) {
+                    $('#navigation-bar').addClass('navbar-active');
+                    $('#navigation-bar-mobile').addClass('navbar-active');
+                    $('#navigation-bar .res-logo').hide(200);
+                }
+                else {
+                    $('#navigation-bar').removeClass('navbar-active');
+                    $('#navigation-bar-mobile').removeClass('navbar-active');
+                    $('#navigation-bar .res-logo').show(200);
+                }
+            });
+
+            $(".burger").on("click", function () {
+                var menu = $(".menu-mobile");
+                var ul = $(".menu-mobile ul");
+                var li = $(".menu-mobile ul li");
+                var a = $(".menu-mobile ul li a");
+
+                $(menu).toggleClass("nav-active");
+
+                if ($(menu).hasClass("nav-active")) {
+                    $("body").addClass("menuActive")
+                } else {
+                    $("body").removeClass("menuActive")
+                }
+
+
+                $(a).each(function (index) {
+                    console.log(this.style.animation)
+                    if (this.style.animation) {
+                        this.style.animation = "";
+                    } else {
+                        this.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+                    }
+                })
+
+                $(".burger").toggleClass('toggle');
+            })
+        })
+    </script>
+</body>
+
+</html>
