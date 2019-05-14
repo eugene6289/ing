@@ -7,11 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/snow.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
+    <div class="snowcontainer">
+        <div class="snowimage snow1"></div>
+        <div class="snow snow2"></div>
+        <div class="snow snow3"></div>
+    </div>
+
     <nav id="navigation-bar">
         <div class="logo">
             <p class="res-logo">Eu</p>
@@ -86,7 +93,7 @@
                 if ($(window).scrollTop() >= 100 && $(window).width() >= 576) {
                     $('#navigation-bar').addClass('navbar-active');
                     $('#navigation-bar .res-logo').hide(200);
-                }else {
+                } else {
                     $('#navigation-bar').removeClass('navbar-active');
                     $('#navigation-bar .res-logo').show(200);
                 }
