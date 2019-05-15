@@ -45,13 +45,13 @@ body {
   height: 100vh;
   display: block;
   z-index: 1;
-}
-
-.menu-mobile ul {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+}
+
+.menu-mobile ul {
   width: 100%;
   height: 100%;
   background: #1e7277;
@@ -92,11 +92,12 @@ body {
   top: 0;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+  z-index: 1;
 }
 
 #navigation-bar.navbar-active {
   height: 50px;
-  background: rgba(0, 0, 0, 0.295);
+  background: rgba(0, 0, 0, 0.74);
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -130,6 +131,11 @@ body {
   color: #ffffff;
   text-shadow: 0.5px 1px 1px #000, 1px 1.5px 1px #fff;
   cursor: pointer;
+}
+
+#navigation-bar .logo:hover p {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 #navigation-bar ul.menu {
@@ -280,7 +286,7 @@ body {
     padding: 5px 0;
   }
   #navigation-bar.navbar-active-mobile {
-    background: rgba(0, 0, 0, 0.295);
+    background: #000000;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
   }
@@ -303,7 +309,7 @@ body {
   }
 }
 
-.nav-active ul {
+.nav-active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -358,8 +364,18 @@ body {
 }
 
 .section-2 {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
+}
+
+.section-2 .title {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  color: #fff;
+  margin: 10px 0;
 }
 
 .section-2 .row {
@@ -374,47 +390,108 @@ body {
 }
 
 .section-2 .row .card {
-  width: 30%;
+  width: 23%;
+  height: 23%;
   margin: 1%;
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+  position: relative;
 }
 
-.section-2 .row .card img {
+.section-2 .row .card a {
+  position: relative;
+  display: block;
+}
+
+.section-2 .row .card a img {
+  display: block;
   width: 100%;
+  height: auto;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  opacity: 0.8;
 }
 
-.section-2 .row .card h1, .section-2 .row .card p {
-  color: white;
+.section-2 .row .card a:hover img {
+  opacity: 0.3;
+}
+
+.section-2 .row .card a:hover .info {
+  top: 40%;
+  opacity: 1;
+}
+
+.section-2 .row .card a .info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.section-2 .row .card a .info .wrap {
+  display: block;
   text-align: center;
+}
+
+.section-2 .row .card a .info .wrap b {
+  font-size: 2rem;
+  color: #FFF;
+}
+
+.section-2 .row .card a .info .wrap span {
+  display: block;
+  font-size: 0.7rem;
+  color: #ffeb61;
+}
+
+@media all and (max-width: 991px) {
+  .section-2 {
+    width: 80%;
+  }
+  .section-2 .row .card a .info .wrap b {
+    font-size: 1.1rem;
+  }
+  .section-2 .row .card a .info .wrap span {
+    font-size: 0.7rem;
+  }
 }
 
 @media all and (max-width: 767px) {
   .section-2 {
-    width: 90%;
-    margin: 0 auto;
+    width: 80%;
   }
-  .section-2 .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: wrap;
-        flex-flow: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .section-2 .title {
+    font-size: 4.5rem;
   }
   .section-2 .row .card {
     width: 48%;
     margin: 1%;
-    -webkit-box-shadow: 2px 2px 5px black;
-            box-shadow: 2px 2px 5px black;
   }
-  .section-2 .row .card img {
-    width: 100%;
+  .section-2 .row .card a .info .wrap b {
+    font-size: 1.5rem;
   }
-  .section-2 .row .card p {
-    display: none;
+  .section-2 .row .card a .info .wrap span {
+    font-size: 0.7rem;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .section-2 {
+    width: 80%;
+  }
+  .section-2 .title {
+    font-size: 3.5rem;
+  }
+  .section-2 .row .card {
+    width: 48%;
+    margin: 1%;
+  }
+  .section-2 .row .card a .info .wrap b {
+    font-size: 1.5rem;
+  }
+  .section-2 .row .card a .info .wrap span {
+    font-size: 0.7rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
