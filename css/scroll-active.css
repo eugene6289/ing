@@ -1,0 +1,64 @@
+.container-about{
+    width: 100%;
+}
+.container-about h1{
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+}
+
+.about {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 100px 0;
+    transform-style: preserve-3d;
+    transform: perspective(800px);
+}
+
+.about h2 {
+    font-size: 58px;
+    font-weight: 400;
+}
+
+.about h2,.about p {
+    color: #fff;
+    transition: all 0.8s ease;
+}
+
+.about.hidden h2 {
+    opacity: 0;
+    transform: translate3d(0, 0, 400px) rotateY(-40deg);
+}
+
+.about.hidden p {
+    opacity: 0;
+    transform: translate3d(0, 0, 400px) rotateY(40deg);
+}
+
+.about-2 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 100px 0;
+    transform-style: preserve-3d;
+    transform: perspective(800px);
+}
+
+.about-2 h2 {
+    font-size: 58px;
+    font-weight: 400;
+}
+
+.about-2 h2,.about-2 p {
+    color: #fff;
+    transition: all 0.8s ease;
+}
+
+.about-2.hidden h2 {
+    opacity: 0;
+    transform: translate3d(0, 0, 400px) rotateY(40deg);
+}
+
+.about-2.hidden p {
+    opacity: 0;
+    transform: translate3d(0, 0, 400px) rotateY(-40deg);
+}
