@@ -1,0 +1,154 @@
+.section-3 {
+  width: 80%;
+  margin: 150px auto;
+  overflow: hidden;
+}
+
+.section-3 .login-about {
+  max-width: 600px;
+  padding: 100px 0;
+  margin: 0 auto;
+  color: #fff;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(800px);
+          transform: perspective(800px);
+}
+
+.section-3 .login-about h1 {
+  font-size: 58px;
+  font-weight: 400;
+}
+
+.section-3 .login-about p {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.section-3 .login-about.hidden h1 {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 400px) rotateY(-40deg);
+          transform: translate3d(0, 0, 400px) rotateY(-40deg);
+}
+
+.section-3 .login-about.hidden p {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 400px) rotateY(40deg);
+          transform: translate3d(0, 0, 400px) rotateY(40deg);
+}
+
+.container-login {
+  width: 360px;
+  margin: auto;
+  height: 600px;
+  background: url("../images/login-bg2.jpg");
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.container-login h1 {
+  font-size: 40px;
+  color: #fff;
+  padding-top: 125px;
+  padding-bottom: 60px;
+}
+
+.container-login form .tbox {
+  width: 260px;
+  height: 40px;
+  background: #f1f1f1b3;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.container-login form .tbox input {
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  color: #333;
+}
+
+.container-login form .submit {
+  width: 260px;
+  height: 40px;
+  background: #3498db;
+  margin: 14px auto;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container-login a {
+  font-family: 'Gill Sans MT', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+.container-login a:nth-of-type(1) {
+  color: #fff;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.container-login a:nth-of-type(1):hover {
+  color: #3498db;
+}
+
+.container-login a:nth-of-type(1).b1 {
+  width: 260px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.container-login a:nth-of-type(2) {
+  color: #3498db;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.container-login a:nth-of-type(2):hover {
+  color: #fff;
+}
+
+.container-login a:nth-of-type(2).b2 {
+  width: 260px;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .section-3 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container-login {
+    margin-right: 150px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container-login {
+    width: 100%;
+    background-size: cover;
+  }
+}
+/*# sourceMappingURL=login.css.map */

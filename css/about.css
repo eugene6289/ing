@@ -1,5 +1,6 @@
 .container-about{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
 .container-about h1{
     text-align: center;
@@ -7,7 +8,7 @@
     color: #fff;
 }
 
-.about {
+.about , .about-2 {
     max-width: 600px;
     margin: 0 auto;
     padding: 100px 0;
@@ -15,12 +16,12 @@
     transform: perspective(800px);
 }
 
-.about h2 {
+.about h2, .about-2 h2 {
     font-size: 58px;
     font-weight: 400;
 }
 
-.about h2,.about p {
+.about h2,.about p ,.about-2 h2,.about-2 p {
     color: #fff;
     transition: all 0.8s ease;
 }
@@ -35,24 +36,6 @@
     transform: translate3d(0, 0, 400px) rotateY(40deg);
 }
 
-.about-2 {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 100px 0;
-    transform-style: preserve-3d;
-    transform: perspective(800px);
-}
-
-.about-2 h2 {
-    font-size: 58px;
-    font-weight: 400;
-}
-
-.about-2 h2,.about-2 p {
-    color: #fff;
-    transition: all 0.8s ease;
-}
-
 .about-2.hidden h2 {
     opacity: 0;
     transform: translate3d(0, 0, 400px) rotateY(40deg);
@@ -61,4 +44,14 @@
 .about-2.hidden p {
     opacity: 0;
     transform: translate3d(0, 0, 400px) rotateY(-40deg);
+}
+
+@media screen and (max-width:575px){
+    .container-about h1{
+        font-size: 4rem;
+    }
+    .about h2, .about-2 h2 {
+        font-size: 40px;
+        font-weight: 400;
+    }
 }

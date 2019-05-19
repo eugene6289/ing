@@ -1,0 +1,126 @@
+.section-3{
+    width: 80%;
+    margin: 150px auto;
+    overflow: hidden;
+    .login-about{
+        max-width: 600px;
+        padding: 100px 0;
+        margin: 0 auto;
+        color: #fff;
+        transform-style: preserve-3d;
+        transform: perspective(800px);
+        h1{
+            font-size: 58px;
+            font-weight: 400;
+        }
+        p{
+            transition: all 0.8s ease;
+        }
+        &.hidden h1{
+            opacity: 0;
+            transform: translate3d(0, 0, 400px) rotateY(-40deg);
+        }
+        &.hidden p{
+            opacity: 0;
+            transform: translate3d(0, 0, 400px) rotateY(40deg);
+        }
+    }
+}
+.container-login{
+    width: 360px;
+    margin: auto;
+    height: 600px;
+    background: url("../images/login-bg2.jpg");
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 0.5s all;
+    h1{
+        font-size: 40px;
+        color: #fff;
+        padding-top: 125px;
+        padding-bottom: 60px;
+    }
+    form {
+        .tbox{
+            width: 260px;
+            height: 40px;
+            background: #f1f1f1b3;
+            margin: 10px auto;
+            border-radius: 10px;
+            input{
+                background: none;
+                border: none;
+                outline: none;
+                text-align: center;
+                line-height: 40px;
+                font-size: 14px;
+                color: #333;
+            }
+        }
+        .submit{
+            width: 260px;
+            height: 40px;
+            background: #3498db;
+            margin: 14px auto;
+            border-radius: 10px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    a{
+        font-family:'Gill Sans MT', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+    }
+    a:nth-of-type(1){
+        color: #fff;
+        transition: 0.2s ease-in;
+        &:hover{
+            color: #3498db;
+        }
+        &.b1{
+            width: 260px;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+    }
+    a:nth-of-type(2){
+        color:#3498db;
+        transition: 0.2s ease-in;
+        &:hover{
+            color: #fff;
+        }
+        &.b2{
+            width: 260px;
+            text-align: center;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px ){
+    .section-3{
+        width: 100%;
+        display: flex;
+    }
+    .container-login{
+        margin-right: 150px;
+    }
+}
+
+@media screen and (max-width:575px){
+    .container-login{
+        width: 100%;
+        background-size: cover;
+    }
+}

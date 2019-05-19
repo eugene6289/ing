@@ -4,6 +4,7 @@
     box-sizing: border-box;
     list-style: none;   
 }
+
 body{
     background: linear-gradient(135deg, #2e2e2e ,#2d0080);
     background-size: 400% 400%;
@@ -201,6 +202,15 @@ body{
     }
 }
 
+//footer
+footer{
+    background: black;
+    color: #fff;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+}
+
 @media all and (min-width:576px)and (max-width:767px){
     #navigation-bar{
         ul.menu{
@@ -225,7 +235,7 @@ body{
         transition: all 0.3s ease-in;
         padding: 5px 0;
         &.navbar-active-mobile{
-            background: #000000;
+            background: #0000003b;
             transition: all 0.3s ease-in;
         }
         .logo{

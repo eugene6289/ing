@@ -264,6 +264,14 @@ body {
   transition: .3s all ease;
 }
 
+footer {
+  background: black;
+  color: #fff;
+  height: 5vh;
+  text-align: center;
+  line-height: 5vh;
+}
+
 @media all and (min-width: 576px) and (max-width: 767px) {
   #navigation-bar ul.menu {
     display: none;
@@ -286,7 +294,7 @@ body {
     padding: 5px 0;
   }
   #navigation-bar.navbar-active-mobile {
-    background: #000000;
+    background: #0000003b;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
   }
