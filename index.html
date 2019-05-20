@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/password.css">
     <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/api-weather.css">
 
     <link rel="stylesheet" href="css/animate/animated.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -213,7 +214,6 @@
         </div>
     </div>
 
-
     <div class="section-5">
         <div class="container-password">
             <h1>Forgot Password?</h1>
@@ -323,6 +323,17 @@
         </div>
     </div>
 
+    <div class="section-7">
+        <select name="" id="city">
+            <option value="">Select Country</option>
+            <option value="taipei">Taipei / 臺北</option>
+            <option value="tokyo">Tokyo / 東京</option>
+            <option value="bangkok">Bangkok / 曼谷</option>
+        </select>
+
+        <div class="api-weather"></div>
+    </div>
+
 
     <footer>
         <h4>Copyright @ Eugene Work</h4>
@@ -332,6 +343,7 @@
 
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/scroll-active.js"></script>
+    <script src="js/api-weather.js"></script>
     <script>
         $(document).ready(function () {
             $(window).on("scroll", function () {

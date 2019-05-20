@@ -73,3 +73,14 @@
     }
   }
 }
+@media screen and (max-width: 575px){
+  .section-6{
+    .row{
+      .col-md-6{
+        .card{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
