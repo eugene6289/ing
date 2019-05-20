@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/password.css">
+    <link rel="stylesheet" href="css/weather.css">
+
+    <link rel="stylesheet" href="css/animate/animated.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
@@ -209,7 +212,7 @@
             </p>
         </div>
     </div>
-    
+
 
     <div class="section-5">
         <div class="container-password">
@@ -223,6 +226,103 @@
             </form>
         </div>
     </div>
+
+    <div class="section-6">
+        <div class="weather-about">
+            <h1>Weather UI Design</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi, hic quod a consequatur
+                pariatur facilis ullam beatae exercitationem fuga fugit aperiam quibusdam voluptatem. Deleniti hic
+                placeat fuga vitae aliquam?
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card" style="background-image: url('images/sunny.jpg');">
+                    <ul class="list-inline">
+                        <li><img src="images/sunny-icon.png" alt="" /></li>
+                        <li>Sunny</li>
+                    </ul>
+                    <h1>36°</h1>
+                    <div class="date">
+                        <h3>09:00</h3>
+                        <p>MON 09:00</p>
+                    </div>
+                    <p class="city">New Taipei City</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="background-image: url('images/sunny-night.jpg');">
+                    <ul class="list-inline">
+                        <li><img src="images/night-icon.png" alt="" /></li>
+                        <li>Sunny</li>
+                    </ul>
+                    <h1>27°</h1>
+                    <div class="date">
+                        <h3>21:56</h3>
+                        <p>Tue 09:56</p>
+                    </div>
+                    <p class="city">New Taipei City</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="background-image: url('images/cloudy.jpg');">
+                    <ul class="list-inline">
+                        <li><img src="images/cloudy.png" alt="" /></li>
+                        <li>Cloudy</li>
+                    </ul>
+                    <h1>30°</h1>
+                    <div class="date">
+                        <h3>15:23</h3>
+                        <p>Wed 03:23</p>
+                    </div>
+                    <p class="city">New Taipei City</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="background-image: url('images/rainy.jpg');">
+                    <ul class="list-inline">
+                        <li><img src="images/rainy-icon.png" alt="" /></li>
+                        <li>Heavy rain</li>
+                    </ul>
+                    <h1>24°</h1>
+                    <div class="date">
+                        <h3>20:35</h3>
+                        <p>Thur 08:35</p>
+                    </div>
+                    <p class="city">New Taipei City</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="background-image: url('images/thunder.jpg');">
+                    <ul class="list-inline">
+                        <li><img src="images/thunder.png" alt="" /></li>
+                        <li>Rainy</li>
+                    </ul>
+                    <h1>22°</h1>
+                    <div class="date">
+                        <h3>18:42</h3>
+                        <p>Fri 06:42</p>
+                    </div>
+                    <p class="city">New Taipei City</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="background-image: url('images/snow.jpg');">
+                    <ul class="list-inline">
+                        <li><img src="images/rainy-icon.png" alt="" /></li>
+                        <li>Snow</li>
+                    </ul>
+                    <h1>4°</h1>
+                    <div class="date">
+                        <h3>22:56</h3>
+                        <p>Sat 10:56</p>
+                    </div>
+                    <p class="city">New Taipei City</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer>
         <h4>Copyright @ Eugene Work</h4>
@@ -259,7 +359,6 @@
                 $(menu).toggleClass("nav-active");
 
                 $(a).each(function (index) {
-                    console.log(this.style.animation)
                     if (this.style.animation) {
                         this.style.animation = "";
                     } else {

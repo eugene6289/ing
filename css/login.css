@@ -18,6 +18,8 @@
 .section-3 .login-about h1 {
   font-size: 58px;
   font-weight: 400;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .section-3 .login-about p {

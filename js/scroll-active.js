@@ -71,10 +71,26 @@ $(document).ready(function () {
 
     documentEl.on('scroll', function () {
       if (documentEl.scrollTop() > aboutElOffset ){
-        aboutEl.css({
-          "transform" : "translateX(0)",
-          "opacity" : "1"
-        })
-      } 
-    });
-  })
+          aboutEl.css({
+            "transform" : "translateX(0)",
+            "opacity" : "1"
+          })
+        } 
+      });
+    })
+
+  //weather-about
+  $(document).ready(function () {
+    var aboutEl = $('.section-6 .weather-about');
+    var aboutElOffset = aboutEl.offset().top-400;
+    var  documentEl = $(document);
+
+    documentEl.on('scroll', function () {
+      if (documentEl.scrollTop() > aboutElOffset ){
+          aboutEl.addClass("animated bounceInDown").css({
+            "opacity" : "1"
+          })
+        } 
+      });
+    })
+
